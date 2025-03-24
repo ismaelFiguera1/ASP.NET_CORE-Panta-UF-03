@@ -176,3 +176,7 @@ C:\Users\alum-01\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debu
 C:\Users\alum-01\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\Cistell-de-la-compra.pdb
 C:\Users\alum-01\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\Cistell-de-la-compra.genruntimeconfig.cache
 C:\Users\alum-01\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\ref\Cistell-de-la-compra.dll
+C:\Users\usuari\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\bin\Debug\net8.0\Cistell-de-la-compra.staticwebassets.endpoints.json
+C:\Users\usuari\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\usuari\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\staticwebassets\msbuild.Cistell-de-la-compra.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\usuari\source\repos\Cistell-de-la-compra\Cistell-de-la-compra\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Cistell-de-la-compra.bundle.scp.css",
-      "PackagePath": "staticwebassets\\Cistell-de-la-compra.bundle.scp.css"
+      "PackagePath": "staticwebassets\\Cistell-de-la-compra.z9q3aphsy5.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\wwwroot\\NewFolder\\Cistella.css",
@@ -311,6 +311,10 @@
     {
       "Id": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cistell-de-la-compra.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Cistell-de-la-compra.Microsoft.AspNetCore.StaticWebAssets.props",

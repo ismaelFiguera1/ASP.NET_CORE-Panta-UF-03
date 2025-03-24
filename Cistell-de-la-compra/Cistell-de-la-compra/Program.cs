@@ -23,8 +23,9 @@ namespace Cistell_de_la_compra
 
             builder.Services.AddTransient<IUsuarisRepository, UsuarisRepository>();
             builder.Services.AddTransient<IProductesRepository, ProductesRepository>();
+            builder.Services.AddTransient<ICityRepository, CityRepository>();
 
-			var app = builder.Build();
+            var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
