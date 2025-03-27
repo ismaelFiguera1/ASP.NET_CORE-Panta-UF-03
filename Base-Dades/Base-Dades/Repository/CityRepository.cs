@@ -10,7 +10,27 @@ namespace Base_Dades.Repository
 
         public List<Ciutat> ObtenirCiutats()
         {
-            return Ciutats.LlistaCiutats;
+            var llista = new List<Ciutat>();
+            string comanda = "select * from city";
+
+            var conn = DB.ObtenirConnexio();
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = comanda;
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var ciutat = new Ciutat();
+                ciutat.id = reader.GetInt32("ID");
+                ciutat.name = reader.GetString("Name");
+                ciutat.countrycode = reader.GetString("CountryCode");
+                ciutat.district = reader.GetString("District");
+                ciutat.population = reader.GetInt32("Population");
+                llista.Add(ciutat);
+            }
+            conn.Close();
+
+            return llista;
         }
 
         public List<Ciutat> Trobat()
