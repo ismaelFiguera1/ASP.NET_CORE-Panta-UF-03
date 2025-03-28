@@ -1,5 +1,5 @@
 ﻿using Base_Dades.Models;
-using Base_Dades.Repository;
+using Base_Dades.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cistell_de_la_compra.Controllers
@@ -19,14 +19,30 @@ namespace Cistell_de_la_compra.Controllers
             return View(llistaCiutats);
         }
 
-        public IActionResult Accions(string action)
+        public IActionResult DeleteCiutat(int idCiutatBuscar)
         {
-            var llistaCiutats = new List<Ciutat>();
+            _cityRepository.DeleteCiutat(idCiutatBuscar);
+            var llistaCiutats = _cityRepository.ObtenirCiutats();
+            TempData["Missatge"] = "✅ La ciutat amb id "+ idCiutatBuscar + " s'ha eliminat correctament";
+            return View("Index",llistaCiutats);
+        }
 
-            llistaCiutats = _cityRepository.Trobat();
+        public IActionResult UpdateCiutat( int idCiutatBuscar)
+        {
+                var ciutat = _cityRepository.BuscarCiutat(idCiutatBuscar);
+                return View("Editar", ciutat);
+        }
 
 
-            return View();
+        public IActionResult UpdateCiutatFINAL(Ciutat ciutat)
+        {
+            _cityRepository.Update(ciutat);
+
+            var ciutat1 = _cityRepository.BuscarCiutat(ciutat.id);
+
+            TempData["Missatge"] = "✅ La ciutat s'ha actualitzat correctament";
+
+            return View("Editar", ciutat1);
         }
     }
 }

@@ -1,0 +1,32 @@
+﻿@model Ciutat
+<section>
+	<form asp-action="UpdateCiutatFINAL" method="post">
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Nom</th>
+				<th>Codi-Pais</th>
+				<th>Districte</th>
+				<th>Poblacio</th>
+			</tr>
+			<tr>
+				<td>@Model.id</td>
+				<td><input type="text" name="name" required value="@Model.name" /></td>
+				<td><input type="text" name="countrycode" required value="@Model.countrycode" /></td>
+				<td><input type="text" name="district" required value="@Model.district" /></td>
+				<td><input type="number" name="population" required value="@Model.population" /></td>
+			</tr>
+		</table>
+		<input type="hidden" name="id" value="@Model.id" />
+		<button type="submit">UPDATE</button>
+	</form>
+
+	@if (TempData["Missatge"] != null)
+	{
+		<div style="background-color: #d4edda; padding: 10px; border-radius: 5px; color: #155724;">
+			@TempData["Missatge"]
+		</div>
+	}
+
+	
+</section>

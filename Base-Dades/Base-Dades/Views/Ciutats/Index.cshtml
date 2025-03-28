@@ -1,27 +1,43 @@
 ﻿<section class="ciutats">
     <h1>Ciutats del Mon</h1>
     <br /><br /><br /><br /><br />
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nom</th>
-            <th>Codi-Pais</th>
-            <th>Districte</th>
-            <th>Poblacio</th>
-        </tr>
-        @foreach(var el in Model)
-        {
-            <tr>
-                <td>@el.id</td>
-                <td>@el.name</td>
-                <td>@el.countrycode</td>
-                <td>@el.district</td>
-                <td>@el.population</td>
-                <td><button>Editar</button></td>
-                <td><button>Editar</button></td>
-            </tr>
-        }
-    </table>
+    @if (TempData["Missatge"] != null)
+    {
+        <div style="background-color: #d4edda; padding: 10px; border-radius: 5px; color: #155724;">
+            @TempData["Missatge"]
+        </div>
+    }
+    
+        <table>
+            
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Codi-Pais</th>
+                    <th>Districte</th>
+                    <th>Poblacio</th>
+                </tr>
+                @foreach(var el in Model)
+                {
+            <form asp-action="BuscarCiutat" method="post">
+                    <tr>
+                        <td>@el.id</td>
+                        <td>@el.name</td>
+                        <td>@el.countrycode</td>
+                        <td>@el.district</td>
+                        <td>@el.population</td>
+                        <input type="hidden" name="idCiutatBuscar" value="@el.id" />
+                        <td>
+                            <button asp-action="UpdateCiutat" asp-controller="Ciutats" type="submit">Update</button>
+                        </td>
+                        <td>
+                            <button asp-action="DeleteCiutat" asp-controller="Ciutats" type="submit">Delete</button>
+                        </td>
+                    </tr>
+            </form>
+                }
 
+        </table>
+    
     
 </section>

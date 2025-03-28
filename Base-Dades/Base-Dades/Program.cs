@@ -1,6 +1,7 @@
 
 
 using Base_Dades.Repository;
+using Base_Dades.Repository.Interfaces;
 
 namespace Base_Dades
 {
