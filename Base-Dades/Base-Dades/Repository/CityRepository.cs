@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using Base_Dades.Data;
 using Base_Dades.Repository.Interfaces;
 using Mysqlx.Crud;
+using System.Data;
 
 namespace Base_Dades.Repository
 {
@@ -81,7 +82,7 @@ namespace Base_Dades.Repository
         public void DeleteCiutat(int idCiutat)
         {
 
-            
+
 
             string comanda = "DELETE FROM city WHERE ID = @idCity";
             var conn = DB.ObtenirConnexio();

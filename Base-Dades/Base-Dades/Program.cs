@@ -14,6 +14,7 @@ namespace Base_Dades
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<ICityRepository, CityRepository>();
+            builder.Services.AddTransient<ICountryRepository, CountryRepository>();
 
             var app = builder.Build();
 
