@@ -64,11 +64,12 @@ namespace Base_Dades.Repository
 
         public void Update(Ciutat city)
         {
-            string comanda = "UPDATE city SET Name=@nom,CountryCode='ESP',District=@districte,Population=@poblacio WHERE ID = @idcity";
+            string comanda = "UPDATE city SET Name=@nom,CountryCode=@code,District=@districte,Population=@poblacio WHERE ID = @idcity";
             var conn = DB.ObtenirConnexio();
             conn.Open();
             MySqlCommand cmd = conn.CreateCommand();
             cmd.Parameters.AddWithValue("@nom", city.name);
+            cmd.Parameters.AddWithValue("@code", city.countrycode);
             cmd.Parameters.AddWithValue("@districte", city.district);
             cmd.Parameters.AddWithValue("@poblacio", city.population);
             cmd.Parameters.AddWithValue("@idcity", city.id);

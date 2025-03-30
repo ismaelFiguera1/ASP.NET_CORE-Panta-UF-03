@@ -1,5 +1,6 @@
 ﻿using Base_Dades.Models;
 using Base_Dades.Repository.Interfaces;
+using Base_Dades.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cistell_de_la_compra.Controllers
@@ -34,7 +35,11 @@ namespace Cistell_de_la_compra.Controllers
         {
                 var ciutat = _cityRepository.BuscarCiutat(idCiutatBuscar);
                 var paisos = _countryRepository.obtenirPaisos();
-                return View("Editar", ciutat);
+
+            var dades = _countryRepository.paisCiutat(ciutat);
+            dades.ciutat = ciutat;
+            dades.llistaPaisos = paisos;
+                return View("Editar", dades);
         }
 
 

@@ -1,5 +1,4 @@
-﻿@model Ciutat
-<section>
+﻿<section>
 	<form asp-action="UpdateCiutatFINAL" method="post">
 		<table>
 			<tr>
@@ -10,18 +9,22 @@
 				<th>Poblacio</th>
 			</tr>
 			<tr>
-				<td>@Model.id</td>
-				<td><input type="text" name="name" required value="@Model.name" /></td>
+				<td>@Model.ciutat.id</td>
+				<td><input type="text" name="name" required value="@Model.ciutat.name" /></td>
 				<td>
-					<select name="">
-						<option value="value">text</option>
+					<select name="countrycode">
+						<option value="@Model.ciutat.countrycode">@Model.pais.Name</option>
+						@foreach(Pais pais in Model.llistaPaisos){
+							<option value="@pais.Code">@pais.Name</option>
+						}
+						
 					</select>
 				</td>
-				<td><input type="text" name="district" required value="@Model.district" /></td>
-				<td><input type="number" name="population" required value="@Model.population" /></td>
+				<td><input type="text" name="district" required value="@Model.ciutat.district" /></td>
+				<td><input type="number" name="population" required value="@Model.ciutat.population" /></td>
 			</tr>
 		</table>
-		<input type="hidden" name="id" value="@Model.id" />
+		<input type="hidden" name="id" value="@Model.ciutat.id" />
 		<button type="submit">UPDATE</button>
 	</form>
 

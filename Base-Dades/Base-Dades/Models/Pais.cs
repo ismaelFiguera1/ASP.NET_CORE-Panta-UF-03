@@ -10,13 +10,13 @@
         public double SurfaceArea { get; set; }
         public int? IndepYear { get; set; }
         public int Population { get; set; }
-        public double Lifeexpectancy { get; set; }
+        public double? Lifeexpectancy { get; set; }
         public double Gnp { get; set; }
-        public double GnpOld { get; set; }
+        public double? GnpOld { get; set; }
         public string? Localname { get; set; }
         public string? GovernmentForm { get; set; }
         public string? HeadofState { get; set; }
-        public int Capital { get; set; }
+        public int? Capital { get; set; }
         public string? Code2 { get; set; }
     }
 }
