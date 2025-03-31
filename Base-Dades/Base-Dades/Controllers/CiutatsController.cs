@@ -47,11 +47,15 @@ namespace Cistell_de_la_compra.Controllers
         {
             _cityRepository.Update(ciutat);
 
-            var ciutat1 = _cityRepository.BuscarCiutat(ciutat.id);
+            var dades = _countryRepository.paisCiutat(ciutat);
+
+            dades.ciutat = ciutat;
+
+            dades.llistaPaisos = _countryRepository.obtenirPaisos();
 
             TempData["Missatge"] = "La ciutat s'ha actualitzat correctament";
 
-            return View("Editar", ciutat1);
+            return View("Editar", dades);
         }
     }
 }
