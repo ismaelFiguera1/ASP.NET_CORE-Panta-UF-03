@@ -14,7 +14,7 @@ namespace Base_Dades.Repository
         public List<Ciutat> ObtenirCiutats()
         {
             var llista = new List<Ciutat>();
-            string comanda = "select * from city  LIMIT 100";
+            string comanda = "select * from city";
 
             var conn = DB.ObtenirConnexio();
             conn.Open();
@@ -97,6 +97,22 @@ namespace Base_Dades.Repository
             conn.Close();
 
 
+        }
+
+        public void crearCiutat(Ciutat city)
+        {
+            string comanda = "INSERT INTO city(Name, CountryCode, District, Population) VALUES (@nom,@codi,@district,@poblation)";
+
+            var conn = DB.ObtenirConnexio();
+            conn.Open();
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = comanda;
+            cmd.Parameters.AddWithValue("@nom", city.name);
+            cmd.Parameters.AddWithValue("@codi", city.countrycode);
+            cmd.Parameters.AddWithValue("@district", city.district);
+            cmd.Parameters.AddWithValue("@poblation", city.population);
+            cmd.ExecuteNonQuery();
+            conn.Close();
         }
     }
 }

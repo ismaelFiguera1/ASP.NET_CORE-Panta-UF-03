@@ -12,7 +12,7 @@ namespace Base_Dades.Repository
         {
             var llista = new List<Pais>();
 
-            string comanda = "select * from country  LIMIT 100";
+            string comanda = "select * from country";
 
             var conn = DB.ObtenirConnexio();
             conn.Open();
@@ -60,7 +60,17 @@ namespace Base_Dades.Repository
 
                 pais.Localname = reader.GetString("LocalName");
                 pais.GovernmentForm = reader.GetString("GovernmentForm");
-                pais.HeadofState = reader.GetString("HeadOfState");
+
+                if (reader.IsDBNull(reader.GetOrdinal("HeadOfState")))
+                {
+                    pais.HeadofState = null;
+                }
+                else
+                {
+                    pais.HeadofState = reader.GetString("HeadOfState");
+                }
+
+                
 
                 if (reader.IsDBNull(reader.GetOrdinal("Capital")))
                 {

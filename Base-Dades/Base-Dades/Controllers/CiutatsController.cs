@@ -16,19 +16,46 @@ namespace Cistell_de_la_compra.Controllers
             this._countryRepository = ar;
         }
 
-
+        [HttpGet]
         public IActionResult Index()
         {
-            var llistaCiutats = _cityRepository.ObtenirCiutats();
-            return View(llistaCiutats);
+            var dades = new PaisosCiutats();
+            dades.llistaCiutats = _cityRepository.ObtenirCiutats();
+            dades.ciutat = new Ciutat();
+            dades.llistaPaisos = _countryRepository.obtenirPaisos();
+            return View(dades);
+        }
+
+        [HttpPost]
+        public IActionResult AltaCiutat(PaisosCiutats dades)
+        {
+            if (!ModelState.IsValid)
+            {
+                
+                dades.llistaCiutats = _cityRepository.ObtenirCiutats();
+                dades.llistaPaisos = _countryRepository.obtenirPaisos();
+                return View("Index",dades);
+            }
+
+            _cityRepository.crearCiutat(dades.ciutat);
+            TempData["Missatge"] = "La ciutat s'ha creat correctament";
+            dades.llistaCiutats = _cityRepository.ObtenirCiutats();
+            dades.ciutat = new Ciutat();
+            dades.llistaPaisos = _countryRepository.obtenirPaisos();
+
+            return View("Index", dades);
         }
 
         public IActionResult DeleteCiutat(int idCiutatBuscar)
         {
+            var dades = new PaisosCiutats();
             _cityRepository.DeleteCiutat(idCiutatBuscar);
             var llistaCiutats = _cityRepository.ObtenirCiutats();
             TempData["Missatge"] = "La ciutat amb id " + idCiutatBuscar + " s'ha eliminat correctament";
-            return View("Index",llistaCiutats);
+            dades.llistaCiutats = llistaCiutats;
+            dades.ciutat = new Ciutat();
+            dades.llistaPaisos = _countryRepository.obtenirPaisos();
+            return View("Index", dades);
         }
 
         public IActionResult UpdateCiutat(int idCiutatBuscar)
