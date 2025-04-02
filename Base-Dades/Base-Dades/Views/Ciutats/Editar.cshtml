@@ -1,4 +1,5 @@
-﻿<section>
+﻿@model Base_Dades.ViewModels.PaisosCiutats
+<section>
 	<form asp-action="UpdateCiutatFINAL" method="post">
 		<table>
 			<tr>
@@ -10,9 +11,9 @@
 			</tr>
 			<tr>
 				<td>@Model.ciutat.id</td>
-				<td><input type="text" name="name" required value="@Model.ciutat.name" /></td>
+				<td><input type="text" asp-for="ciutat.name" value="@Model.ciutat.name" class="form-control" /></td>
 				<td>
-					<select name="countrycode">
+					<select asp-for="ciutat.countrycode">
 						<option value="@Model.ciutat.countrycode">@Model.pais.Name</option>
 						@foreach(Pais pais in Model.llistaPaisos){
 							<option value="@pais.Code">@pais.Name</option>
@@ -20,11 +21,11 @@
 						
 					</select>
 				</td>
-				<td><input type="text" name="district" required value="@Model.ciutat.district" /></td>
-				<td><input type="number" name="population" required value="@Model.ciutat.population" /></td>
+				<td><input type="text" asp-for="ciutat.district" value="@Model.ciutat.district" class="form-control" /></td>
+				<td><input type="number" asp-for="ciutat.population" value="@Model.ciutat.population" class="form-control" /></td>
 			</tr>
 		</table>
-		<input type="hidden" name="id" value="@Model.ciutat.id" />
+		<input type="hidden" asp-for="ciutat.id" value="@Model.ciutat.id" />
 		<button type="submit">UPDATE</button>
 	</form>
 

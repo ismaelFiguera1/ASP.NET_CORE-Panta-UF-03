@@ -21,8 +21,6 @@ namespace Cistell_de_la_compra.Controllers
         {
             var dades = new PaisosCiutats();
             dades.llistaCiutats = _cityRepository.ObtenirCiutats();
-            dades.ciutat = new Ciutat();
-            dades.llistaPaisos = _countryRepository.obtenirPaisos();
             return View(dades);
         }
 
@@ -32,16 +30,13 @@ namespace Cistell_de_la_compra.Controllers
             if (!ModelState.IsValid)
             {
                 
-                dades.llistaCiutats = _cityRepository.ObtenirCiutats();
                 dades.llistaPaisos = _countryRepository.obtenirPaisos();
-                return View("Index",dades);
+                return View("Afegir",dades);
             }
 
             _cityRepository.crearCiutat(dades.ciutat);
             TempData["Missatge"] = "La ciutat s'ha creat correctament";
             dades.llistaCiutats = _cityRepository.ObtenirCiutats();
-            dades.ciutat = new Ciutat();
-            dades.llistaPaisos = _countryRepository.obtenirPaisos();
 
             return View("Index", dades);
         }
@@ -53,8 +48,6 @@ namespace Cistell_de_la_compra.Controllers
             var llistaCiutats = _cityRepository.ObtenirCiutats();
             TempData["Missatge"] = "La ciutat amb id " + idCiutatBuscar + " s'ha eliminat correctament";
             dades.llistaCiutats = llistaCiutats;
-            dades.ciutat = new Ciutat();
-            dades.llistaPaisos = _countryRepository.obtenirPaisos();
             return View("Index", dades);
         }
 
@@ -83,6 +76,15 @@ namespace Cistell_de_la_compra.Controllers
             TempData["Missatge"] = "La ciutat s'ha actualitzat correctament";
 
             return View("Editar", dades);
+        }
+
+        [HttpGet]
+        public IActionResult Afegir()
+        {
+            var dades = new PaisosCiutats();
+            dades.ciutat = new Ciutat();
+            dades.llistaPaisos = _countryRepository.obtenirPaisos();
+            return View(dades);
         }
     }
 }
