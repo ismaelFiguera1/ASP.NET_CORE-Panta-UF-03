@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "eyJ9i0sFr/k=",
+  "dgSpecHash": "k7ek/gjatGg=",
   "success": true,
-  "projectFilePath": "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
+  "projectFilePath": "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usuari\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\usuari\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

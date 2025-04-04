@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8DEB4117-D368-46C5-9E5B-65518000A758}|Cistell-de-la-compra\\Cistell-de-la-compra.csproj|c:\\users\\usuari\\source\\repos\\cistell-de-la-compra\\cistell-de-la-compra\\repository\\uow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8DEB4117-D368-46C5-9E5B-65518000A758}|Cistell-de-la-compra\\Cistell-de-la-compra.csproj|solutionrelative:cistell-de-la-compra\\repository\\uow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8DEB4117-D368-46C5-9E5B-65518000A758}|Cistell-de-la-compra\\Cistell-de-la-compra.csproj|c:\\users\\usuari\\source\\repos\\cistell-de-la-compra\\cistell-de-la-compra\\repository\\usuarisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8DEB4117-D368-46C5-9E5B-65518000A758}|Cistell-de-la-compra\\Cistell-de-la-compra.csproj|solutionrelative:cistell-de-la-compra\\repository\\usuarisrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UOW.cs",
+              "DocumentMoniker": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\Repository\\UOW.cs",
+              "RelativeDocumentMoniker": "Cistell-de-la-compra\\Repository\\UOW.cs",
+              "ToolTip": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\Repository\\UOW.cs*",
+              "RelativeToolTip": "Cistell-de-la-compra\\Repository\\UOW.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T14:42:02.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UsuarisRepository.cs",
               "DocumentMoniker": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\Repository\\UsuarisRepository.cs",
               "RelativeDocumentMoniker": "Cistell-de-la-compra\\Repository\\UsuarisRepository.cs",
               "ToolTip": "C:\\Users\\usuari\\source\\repos\\Cistell-de-la-compra\\Cistell-de-la-compra\\Repository\\UsuarisRepository.cs",
               "RelativeToolTip": "Cistell-de-la-compra\\Repository\\UsuarisRepository.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T15:20:50.646Z",
               "EditorCaption": ""

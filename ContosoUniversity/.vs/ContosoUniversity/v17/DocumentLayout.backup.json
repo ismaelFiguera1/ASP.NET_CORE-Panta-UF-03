@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4C044A75-2A8E-418F-B9C3-E0C83E735F75}|ContosoUniversity\\ContosoUniversity.csproj|c:\\users\\usuari\\source\\repos\\contosouniversity\\contosouniversity\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C044A75-2A8E-418F-B9C3-E0C83E735F75}|ContosoUniversity\\ContosoUniversity.csproj|solutionrelative:contosouniversity\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4C044A75-2A8E-418F-B9C3-E0C83E735F75}|ContosoUniversity\\ContosoUniversity.csproj|c:\\users\\usuari\\source\\repos\\contosouniversity\\contosouniversity\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4C044A75-2A8E-418F-B9C3-E0C83E735F75}|ContosoUniversity\\ContosoUniversity.csproj|solutionrelative:contosouniversity\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\ContosoUniversity\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ContosoUniversity\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\ContosoUniversity\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ContosoUniversity\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T15:30:13.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\ContosoUniversity\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ContosoUniversity\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\ContosoUniversity\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ContosoUniversity\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADgAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T15:28:08.245Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

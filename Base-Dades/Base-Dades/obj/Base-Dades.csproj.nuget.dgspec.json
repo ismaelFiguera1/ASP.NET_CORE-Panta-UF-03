@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\Base-Dades.csproj": {}
+    "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\Base-Dades.csproj": {}
   },
   "projects": {
-    "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\Base-Dades.csproj": {
+    "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\Base-Dades.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
+        "projectUniqueName": "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
         "projectName": "Base-Dades",
-        "projectPath": "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
+        "projectPath": "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\Base-Dades.csproj",
         "packagesPath": "C:\\Users\\usuari\\.nuget\\packages\\",
-        "outputPath": "Z:\\ASP.NET_CORE-Panta-UF-03\\Base-Dades\\Base-Dades\\obj\\",
+        "outputPath": "C:\\Users\\usuari\\source\\repos\\Base-Dades\\Base-Dades\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
