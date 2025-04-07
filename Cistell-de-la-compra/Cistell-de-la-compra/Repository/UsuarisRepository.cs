@@ -11,7 +11,7 @@ namespace Cistell_de_la_compra.Repository
 
 
 
-		public List<Usuari> ObtenirTotsUsuaris()
+		public List<UsuariLogin> ObtenirTotsUsuaris()
 		{
 			return Usuaris._usuaris;
 		}
@@ -21,23 +21,23 @@ namespace Cistell_de_la_compra.Repository
 			return Usuaris.numeroIntents;
 		}
 
-		public (Usuari, string) trobar(string email, string password)
+		public (UsuariLogin, string) trobar(string email, string password)
 		{
 			UsuarisRepository ur = new();
 			var llista = ur.ObtenirTotsUsuaris();
 			foreach (var item in llista)
 			{
-				if (item.email == email)
+				if (item.Email == email)
 				{
 
-					if (item.password == password)
+					if (item.Password == password)
 					{
 						Dictionary<string, int> llistaIntents = ur.obtenirNumeroIntents();
 						foreach (var item1 in llistaIntents)
 						{
 							if (item1.Value >= 3 && item1.Key == email)
 							{
-								item.locked = true;
+								item.Locked = true;
 								return (null, "ERROR    USUARI    BLOQUEJAT");
 							}
 						}
@@ -57,7 +57,7 @@ namespace Cistell_de_la_compra.Repository
 
 			foreach (var item in llistaUsuaris)
 			{
-				if (item.email == email)
+				if (item.Email == email)
 				{
 					return true;
 				}
@@ -84,13 +84,13 @@ namespace Cistell_de_la_compra.Repository
 
 		}
 
-		public void esborrarIntents(Usuari user)
+		public void esborrarIntents(UsuariLogin user)
 		{
 			UsuarisRepository ur = new();
 			Dictionary<string, int> intents = ur.obtenirNumeroIntents();
 			foreach (var item in intents)
 			{
-				if (item.Key == user.email)
+				if (item.Key == user.Email)
 				{
 					intents[item.Key] = 0;
 				}

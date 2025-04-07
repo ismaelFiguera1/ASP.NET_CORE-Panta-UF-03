@@ -22,7 +22,7 @@ namespace Cistell_de_la_compra.Controllers
             var userJSON = HttpContext.Session.GetString("User");
 
 
-            Usuari user;
+            UsuariLogin user;
 
             if (userJSON == null)
             {
@@ -31,10 +31,10 @@ namespace Cistell_de_la_compra.Controllers
 			}
             else
             {
-				user = JsonSerializer.Deserialize<Usuari>(userJSON);
+				user = JsonSerializer.Deserialize<UsuariLogin>(userJSON);
 			}
 
-            if (user.isAdmin == true)
+            if (user.IsAdmin == true)
             {
                 TempData["ErrorMessage"] = "El teu usuari te permissos de administracio";
                 return RedirectToAction("InserirProducte");
@@ -59,9 +59,9 @@ namespace Cistell_de_la_compra.Controllers
                 return RedirectToAction("Login", "Usuaris");
             }
 
-            Usuari user = JsonSerializer.Deserialize<Usuari>(userJSON);
+            UsuariLogin user = JsonSerializer.Deserialize<UsuariLogin>(userJSON);
 
-            if(user.isAdmin == false)
+            if(user.IsAdmin == false)
             {
                 TempData["ErrorMessage"] = "El teu usuari no te permissos de administracio";
                 return RedirectToAction("Index");

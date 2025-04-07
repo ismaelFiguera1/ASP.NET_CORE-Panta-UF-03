@@ -31,7 +31,7 @@ namespace Cistell_de_la_compra.Controllers
 
             var userJSON = HttpContext.Session.GetString("User");
 
-            Usuari user;
+            UsuariLogin user;
 
             if(userJSON == null)
             {

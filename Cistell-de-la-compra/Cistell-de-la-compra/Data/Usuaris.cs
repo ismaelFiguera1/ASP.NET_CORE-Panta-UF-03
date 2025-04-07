@@ -7,16 +7,16 @@ namespace Cistell_de_la_compra.Data
     {
         // Es cre una llista estatica _usuaris
 
-        public static readonly List<Usuari> _usuaris = [];
+        public static readonly List<UsuariLogin> _usuaris = [];
 
         // Com que es static sol s'executa la primera vegada, i ninguna mes. Sol s'afegeixen una vegada i ja queden per tots
 
 		static Usuaris()
         {
-            _usuaris.Add(new Usuari("12345", "joan23@gmail.com", false, false, new DateTime(2025, 1, 12, 16, 23, 45)));
-            _usuaris.Add(new Usuari("23456", "maria@gmail.com", false, false, new DateTime(2025, 1, 1, 23, 21, 5)));
-            _usuaris.Add(new Usuari("34567", "carme17@gmail.com", false, false, new DateTime(2025, 2, 11, 20, 00, 23)));
-            _usuaris.Add(new Usuari("45678", "super@gmail.com", true, false, new DateTime(2024, 1, 1, 0, 0, 0)));
+            _usuaris.Add(new UsuariLogin("12345", "joan23@gmail.com", false, false, new DateTime(2025, 1, 12, 16, 23, 45)));
+            _usuaris.Add(new UsuariLogin("23456", "maria@gmail.com", false, false, new DateTime(2025, 1, 1, 23, 21, 5)));
+            _usuaris.Add(new UsuariLogin("34567", "carme17@gmail.com", false, false, new DateTime(2025, 2, 11, 20, 00, 23)));
+            _usuaris.Add(new UsuariLogin("45678", "super@gmail.com", true, false, new DateTime(2024, 1, 1, 0, 0, 0)));
         }
 
         public static Dictionary<string, int> numeroIntents { get; set; } = new Dictionary<string, int>

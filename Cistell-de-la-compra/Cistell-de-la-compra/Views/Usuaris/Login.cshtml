@@ -1,4 +1,4 @@
-﻿@model Cistell_de_la_compra.Models.Usuari
+﻿@model Cistell_de_la_compra.Models.UsuariLogin
 
 <section class="login">
     <h1>Login</h1>
@@ -7,15 +7,15 @@
 		<form asp-action="Login" method="post">
 
 			<div>
-				<label asp-for="email"></label>
-				<input asp-for="email" class="form-control" name="email" />
-				<span asp-validation-for="email" class="text-danger"></span>
+				<label asp-for="Email"></label>
+				<input asp-for="Email" class="form-control" name="email" />
+				<span asp-validation-for="Email" class="text-danger"></span>
 			</div>
 
 			<div>
-				<label asp-for="password"></label>
-				<input asp-for="password" class="form-control" name="password" />
-				<span asp-validation-for="password" class="text-danger"></span>
+				<label asp-for="Password"></label>
+				<input asp-for="Password" class="form-control" name="password" />
+				<span asp-validation-for="Password" class="text-danger"></span>
 			</div>
 
 
