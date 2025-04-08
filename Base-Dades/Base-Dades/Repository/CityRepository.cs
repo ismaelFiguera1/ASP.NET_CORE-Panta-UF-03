@@ -14,7 +14,7 @@ namespace Base_Dades.Repository
         public List<Ciutat> ObtenirCiutats()
         {
             var llista = new List<Ciutat>();
-            string comanda = "select * from city limit 100";
+            string comanda = "select * from city";
 
             var conn = DB.ObtenirConnexio();
             conn.Open();
@@ -104,16 +104,28 @@ namespace Base_Dades.Repository
             string comanda = "INSERT INTO city(Name, CountryCode, District, Population) VALUES (@nom,@codi,@district,@poblation)";
 
             bool ciutatDuplicada = comprobatCiutatDuplicada(city);
-            var conn = DB.ObtenirConnexio();
-            conn.Open();
-            MySqlCommand cmd = conn.CreateCommand();
-            cmd.CommandText = comanda;
-            cmd.Parameters.AddWithValue("@nom", city.name);
-            cmd.Parameters.AddWithValue("@codi", city.countrycode);
-            cmd.Parameters.AddWithValue("@district", city.district);
-            cmd.Parameters.AddWithValue("@poblation", city.population);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+
+            if (ciutatDuplicada)
+            {
+                throw new Exception("No pots entrar la mateixa ciutat 2 vegades en el mateix pais");
+            }
+            else
+            {
+                var conn = DB.ObtenirConnexio();
+                conn.Open();
+                MySqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = comanda;
+                cmd.Parameters.AddWithValue("@nom", city.name);
+                cmd.Parameters.AddWithValue("@codi", city.countrycode);
+                cmd.Parameters.AddWithValue("@district", city.district);
+                cmd.Parameters.AddWithValue("@poblation", city.population);
+                cmd.ExecuteNonQuery();
+                conn.Close();
+            }
+
+
+
+
         }
 
         public bool comprobatCiutatDuplicada(Ciutat city)
@@ -125,11 +137,18 @@ namespace Base_Dades.Repository
             cmd.CommandText = comanda;
             cmd.Parameters.AddWithValue("@nomCiutat", city.name);
             cmd.Parameters.AddWithValue("@codiPais", city.countrycode);
-            long contador = cmd.ExecuteScalar();
-
+            Object contador = (long)cmd.ExecuteScalar();
+            var res = Convert.ToInt64(contador);
 
             conn.Close();
-            return false;
+            if (res>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
