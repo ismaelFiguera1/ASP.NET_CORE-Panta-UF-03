@@ -6,9 +6,9 @@ namespace Cistell_de_la_compra.Repository.interfaces
     {
         bool comprovarCorreu(string email);
         void controlIntents(bool correuCorrecte, string correu);
-        void esborrarIntents(UsuariLogin user);
+        void esborrarIntents(Usuari user);
         Dictionary<string, int> obtenirNumeroIntents();
-        List<UsuariLogin> ObtenirTotsUsuaris();
-        (UsuariLogin, string) trobar(string email, string password);
+        List<Usuari> ObtenirTotsUsuaris();
+        (Usuari, string) trobar(string email, string password);
     }
 }

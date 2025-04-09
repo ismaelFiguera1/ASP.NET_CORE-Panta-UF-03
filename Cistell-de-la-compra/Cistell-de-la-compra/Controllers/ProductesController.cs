@@ -22,7 +22,7 @@ namespace Cistell_de_la_compra.Controllers
             var userJSON = HttpContext.Session.GetString("User");
 
 
-            UsuariLogin user;
+            Usuari user;
 
             if (userJSON == null)
             {
@@ -31,7 +31,7 @@ namespace Cistell_de_la_compra.Controllers
 			}
             else
             {
-				user = JsonSerializer.Deserialize<UsuariLogin>(userJSON);
+				user = JsonSerializer.Deserialize<Usuari>(userJSON);
 			}
 
             if (user.IsAdmin == true)
@@ -59,7 +59,7 @@ namespace Cistell_de_la_compra.Controllers
                 return RedirectToAction("Login", "Usuaris");
             }
 
-            UsuariLogin user = JsonSerializer.Deserialize<UsuariLogin>(userJSON);
+            Usuari user = JsonSerializer.Deserialize<Usuari>(userJSON);
 
             if(user.IsAdmin == false)
             {

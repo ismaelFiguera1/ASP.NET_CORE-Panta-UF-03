@@ -11,7 +11,7 @@ namespace Cistell_de_la_compra.Repository
 
 
 
-		public List<UsuariLogin> ObtenirTotsUsuaris()
+		public List<Usuari> ObtenirTotsUsuaris()
 		{
 			return Usuaris._usuaris;
 		}
@@ -21,7 +21,7 @@ namespace Cistell_de_la_compra.Repository
 			return Usuaris.numeroIntents;
 		}
 
-		public (UsuariLogin, string) trobar(string email, string password)
+		public (Usuari, string) trobar(string email, string password)
 		{
 			UsuarisRepository ur = new();
 			var llista = ur.ObtenirTotsUsuaris();
@@ -84,7 +84,7 @@ namespace Cistell_de_la_compra.Repository
 
 		}
 
-		public void esborrarIntents(UsuariLogin user)
+		public void esborrarIntents(Usuari user)
 		{
 			UsuarisRepository ur = new();
 			Dictionary<string, int> intents = ur.obtenirNumeroIntents();

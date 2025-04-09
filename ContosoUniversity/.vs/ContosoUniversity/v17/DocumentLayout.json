@@ -42,8 +42,7 @@
               "RelativeToolTip": "ContosoUniversity\\Models\\Course.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:20:22.95Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T14:20:22.95Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "ContosoUniversity\\Models\\Enrollment.cs",
               "ToolTip": "C:\\Users\\usuari\\source\\repos\\ContosoUniversity\\ContosoUniversity\\Models\\Enrollment.cs",
               "RelativeToolTip": "ContosoUniversity\\Models\\Enrollment.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-07T14:20:04.403Z",
               "EditorCaption": ""
@@ -68,8 +67,7 @@
               "RelativeToolTip": "ContosoUniversity\\Models\\Student.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-07T14:19:39.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-07T14:19:39.939Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "ContosoUniversity\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAAAQAAAAAAAAAAAAqwBoAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T15:30:13.932Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T15:30:13.932Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "ContosoUniversity\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T15:28:08.245Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T15:28:08.245Z"
             }
           ]
         }
