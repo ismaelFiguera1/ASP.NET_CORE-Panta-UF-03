@@ -1,8 +1,8 @@
-﻿using Cistell_de_la_compra.Repository;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Cistell_de_la_compra.Models
 {
+
     public class Usuari
     {
         /// <summary>email. Serveix com a login. Ha de ser únic.</summary>
@@ -32,23 +32,14 @@ namespace Cistell_de_la_compra.Models
         {
         }
 
-
-        public Usuari(string password, string email, bool isAdmin, bool locked, DateTime lastupdate)
+        public Usuari(string email, string nif, string nom, string cognom, string telefon, DateTime dataNaixement)
         {
-            this.Password = password;
-            this.Email = email;
-            this.IsAdmin = isAdmin;
-            this.Locked = locked;
-            this.Lastupdate = lastupdate;
+            Email = email;
+            Nif = nif;
+            Nom = nom;
+            Cognom = cognom;
+            Telefon = telefon;
+            DataNaixement = dataNaixement;
         }
-
-        public Usuari()
-        {
-            this.Email = string.Empty;
-            this.Password = string.Empty;
-        }
-        
-
-
-	}
+    }
 }
